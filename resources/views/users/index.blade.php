@@ -22,7 +22,8 @@
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->name }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->email }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                <a href="{{ route('users.show', $user) }}">Details</a>
+                                <a class="px-4 border border-gray-300 py-2" href="{{ route('users.show', $user) }}">Details</a>
+                                <a class="px-4 border border-gray-300 py-2" href="{{ route('users.edit', $user) }}">Edit</a>
                             </td>
                         </tr>
                     @endforeach

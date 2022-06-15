@@ -13,8 +13,11 @@
                 </div> 
 
                 <a href="{{ route('users.index') }}"
-                class="p-4">
+                class="px-4 border border-gray-300 py-2">
                     Back to User List
+                </a>
+                <a class="px-4 border border-gray-300 py-2 ml-2" href="{{ route('users.edit', $user) }}">
+                    Edit
                 </a>
             </div>
         </div>
