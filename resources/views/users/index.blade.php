@@ -22,7 +22,7 @@
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->name }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->email }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                
+                                <a href="{{ route('users.show', $user) }}">Details</a>
                             </td>
                         </tr>
                     @endforeach
