@@ -8,6 +8,10 @@
 - Laravel Blade Formatter
 - Tailwind CSS IntelliSense
 
+### Browser
+
+- Install Chrome
+- Install Fake Filler Extension
 
 ### Artisan Command
 
