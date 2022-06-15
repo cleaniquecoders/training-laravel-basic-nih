@@ -14,12 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// By Closure
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+// By Controller 
 // Route::get('/', WelcomeController::class);
 
+// By View
 Route::view('/', 'welcome');
 
 Route::middleware([
