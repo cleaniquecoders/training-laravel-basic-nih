@@ -22,8 +22,21 @@
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->name }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $user->email }}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                <a class="px-4 border border-gray-300 py-2" href="{{ route('users.show', $user) }}">Details</a>
-                                <a class="px-4 border border-gray-300 py-2" href="{{ route('users.edit', $user) }}">Edit</a>
+                                <div class="inline-flex">
+                                    <a class="px-4 border border-gray-300 py-2"
+                                        href="{{ route('users.show', $user) }}">Details</a>
+                                    <a class="px-4 border border-gray-300 py-2"
+                                        href="{{ route('users.edit', $user) }}">Edit</a>
+
+                                    <form method="POST" class="m-0 p-0" action="{{ route('users.destroy', $user) }}">
+                                        @csrf @method('DELETE')
+
+                                        <a class="px-4 border border-gray-300 py-2 text-red-500" href="#"
+                                            onclick="if(confirm('Are you sure want to delete this user?')){this.closest('form').submit();}">
+                                            Delete
+                                        </a>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach

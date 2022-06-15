@@ -98,6 +98,10 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        if($user->id != auth()->user()->id) {
+            $user->delete();
+        }
+
+        return redirect()->route('users.index');
     }
 }
