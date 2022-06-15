@@ -20,15 +20,6 @@
                         @enderror
                     </div>
 
-                    <div class="py-4">
-                        <x-jet-label for="email" value="{{ __('Email') }}" />
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $user->email)" required autofocus />
-                        
-                        @error('email')
-                            <p class="text-red-600 text-sm">{{ $message }}</p>
-                        @enderror
-                    </div>
-
                     <div class="flex items-center justify-end mt-4">
 
                         <a href="{{ route('users.show', $user) }}" class="p-4">Cancel</a>

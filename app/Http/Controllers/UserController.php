@@ -81,11 +81,10 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => ['required', 'string', 'min:3', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ]);
 
         $user->update(
-            $request->only('name', 'email')
+            $request->only('name')
         );
 
         return redirect()->route('users.show', $user);
