@@ -65,6 +65,8 @@ A user can create submissions
 ### Notifications
 
 - [x] create notification class - `php artisan make:notification WelcomeNotification`
+- [x] publish notifications table
+   - [x] `php artisan notification:table && php artisan migrate`
 - [x] set notification for `via()`
    - [x] `['database', `mail`]
 - [x] Install mailhog for local mail server - https://github.com/mailhog/MailHog/releases
