@@ -23,10 +23,10 @@ php artisan db:seed
 
 ### Handling Form
 
-- [ ] route, controller to handle update / store form submission
-- [ ] input
-- [ ] form with action, method, @csrf & @method  - if want to use for update / delete
-- [ ] validation + error message
+- [x] route, controller to handle update / store form submission
+- [x] input
+- [x] form with action, method, @csrf & @method  - if want to use for update / delete
+- [x] validation + error message
 
 
 A user has many submissions
@@ -37,7 +37,7 @@ A user can create submissions
 ### Model
 
  - [x] User
- - [ ] Submission
+ - [x] Submission
 
  ### Migration
 
@@ -48,7 +48,7 @@ A user can create submissions
  ### Factory
 
 - [x] User
-- [ ] Submission
+- [x] Submission
 
 
 ### Relationships
