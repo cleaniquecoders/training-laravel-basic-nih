@@ -71,6 +71,8 @@ A user can create submissions
    - [x] `['database', `mail`]
 - [x] Install mailhog for local mail server - https://github.com/mailhog/MailHog/releases
 - [x] Notify user
+- [x] Create notification with markdown - `php artisan make:notification DefaultNotification --markdown=notifications.default`
+   - [x] This will create blade file as well under `resources/views/notifications/default.blade.php`
 
 ```php
 $user = \App\Models\User::first();
