@@ -34,7 +34,7 @@
                                     <a class="px-4 border border-gray-300 py-2"
                                         href="{{ route('users.edit', $user) }}">Edit</a>
 
-                                    <form method="POST" class="m-0 p-0" action="{{ route('users.destroy', $user) }}">
+                                    <form method="POST" class="py-2" action="{{ route('users.destroy', $user) }}">
                                         @csrf @method('DELETE')
 
                                         <a class="px-4 border border-gray-300 py-2 text-red-500" href="#"

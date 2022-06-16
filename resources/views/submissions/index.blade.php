@@ -33,7 +33,7 @@
                                     <a class="px-4 border border-gray-300 py-2"
                                         href="{{ route('submissions.edit', $submission) }}">Edit</a>
                                     @if ($submission->user_id == auth()->user()->id)
-                                        <form method="POST" class="m-0 p-0"
+                                        <form method="POST" class="py-2"
                                             action="{{ route('submissions.destroy', $submission) }}">
                                             @csrf @method('DELETE')
 
