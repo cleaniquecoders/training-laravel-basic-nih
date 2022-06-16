@@ -59,4 +59,20 @@ A user can create submissions
    - [x] Belongs To
 - [x] Query Relationship
    - [x] Eager Load - \App\Models\User::with('submissions)->first();`
-   - [x] Lazy Load - `$submission->load('user')
+   - [x] Lazy Load - `$submission->load('user')`
+
+
+### Notifications
+
+- [x] create notification class - `php artisan make:notification WelcomeNotification`
+- [x] set notification for `via()`
+   - [x] `['database', `mail`]
+- [x] Install mailhog for local mail server - https://github.com/mailhog/MailHog/releases
+- [x] Notify user
+
+```php
+$user = \App\Models\User::first();
+$user->notify(
+   new \App\Notifications\WelcomeNotification($user)
+);
+```
