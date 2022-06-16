@@ -10,4 +10,10 @@ class Submission extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    // a submission belongs to a user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

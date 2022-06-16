@@ -15,7 +15,7 @@ class SubmissionController extends Controller
      */
     public function index()
     {
-        $submissions = Submission::paginate();
+        $submissions = Submission::with('user')->paginate();
 
         return view('submissions.index', compact('submissions'));
     }

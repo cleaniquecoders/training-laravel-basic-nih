@@ -58,4 +58,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // a user has many submissions
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
 }

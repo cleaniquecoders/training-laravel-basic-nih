@@ -49,3 +49,14 @@ A user can create submissions
 
 - [x] User
 - [ ] Submission
+
+
+### Relationships
+
+- [x] Define Foreign Key in Migration
+- [x] Define Relationship in Model
+   - [x] Has Many
+   - [x] Belongs To
+- [x] Query Relationship
+   - [x] Eager Load - \App\Models\User::with('submissions)->first();`
+   - [x] Lazy Load - `$submission->load('user')

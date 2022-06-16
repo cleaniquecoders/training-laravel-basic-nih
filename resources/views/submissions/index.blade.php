@@ -20,11 +20,15 @@
                 <table class="min-w-full divide-y divide-gray-300">
                     <tr class="py-4">
                         <th class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>
+                        <th class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Author</th>
                         <th class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Actions</th>
                     </tr>
                     @foreach ($submissions as $submission)
                         <tr>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $submission->title }}
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                {{ $submission->user->name }}
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                 <div class="inline-flex">
