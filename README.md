@@ -27,3 +27,25 @@ php artisan db:seed
 - [ ] input
 - [ ] form with action, method, @csrf & @method  - if want to use for update / delete
 - [ ] validation + error message
+
+
+A user has many submissions
+A user can create submissions
+
+
+
+### Model
+
+ - [x] User
+ - [ ] Submission
+
+ ### Migration
+
+ - [x] User
+ - [x] Submission
+    - [x] id, user_id, title
+
+ ### Factory
+
+- [x] User
+- [ ] Submission
