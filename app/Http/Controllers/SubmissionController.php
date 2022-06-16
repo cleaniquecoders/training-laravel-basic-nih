@@ -15,7 +15,9 @@ class SubmissionController extends Controller
      */
     public function index()
     {
-        //
+        $submissions = Submission::paginate();
+
+        return view('submissions.index', compact('submissions'));
     }
 
     /**
@@ -25,7 +27,7 @@ class SubmissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('submissions.create');
     }
 
     /**
@@ -36,7 +38,12 @@ class SubmissionController extends Controller
      */
     public function store(StoreSubmissionRequest $request)
     {
-        //
+        $submission = Submission::create([
+            'title' => $request->title,
+            'user_id' => auth()->user()->id,
+        ]);
+
+        return redirect()->route('submissions.show', $submission);
     }
 
     /**
@@ -47,7 +54,7 @@ class SubmissionController extends Controller
      */
     public function show(Submission $submission)
     {
-        //
+        return view('submissions.show', compact('submission'));
     }
 
     /**
@@ -58,7 +65,7 @@ class SubmissionController extends Controller
      */
     public function edit(Submission $submission)
     {
-        //
+        return view('submissions.edit', compact('submission'));
     }
 
     /**
@@ -70,7 +77,9 @@ class SubmissionController extends Controller
      */
     public function update(UpdateSubmissionRequest $request, Submission $submission)
     {
-        //
+        $submission->update($request->only('title'));
+
+        return redirect()->route('submissions.show', $submission);
     }
 
     /**
@@ -81,6 +90,10 @@ class SubmissionController extends Controller
      */
     public function destroy(Submission $submission)
     {
-        //
+        if(auth()->user()->id == $submission->user_id) {
+            $submission->delete();
+        }
+
+        return redirect()->route('submissions.index');
     }
 }

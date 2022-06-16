@@ -13,7 +13,7 @@ class UpdateSubmissionRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return auth()->user();
     }
 
     /**
@@ -24,7 +24,7 @@ class UpdateSubmissionRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => ['required', 'min:5', 'string','max:255'],
         ];
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -36,5 +37,6 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('users', UserController::class);
+    Route::resource('submissions', SubmissionController::class);
 });
 
