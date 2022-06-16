@@ -23,7 +23,5 @@ class SubmissionSeeder extends Seeder
                 'user_id' => $user->id,
             ]);
         }
-
-        
     }
 }
